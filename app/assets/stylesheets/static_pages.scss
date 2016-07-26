@@ -38,6 +38,11 @@ footer {
     background-color: black;
     clear: left;
     text-align: center;
+    border-top-style: dotted;
+    border-right-style: solid;
+    border-bottom-style: dotted;
+    border-left-style: solid;
+    border-color: white;
 }
 .Text blockquote {
 	font-size: 2em;
@@ -110,4 +115,3 @@ body {
                 padding-bottom: 10px;
             }
 
-            
