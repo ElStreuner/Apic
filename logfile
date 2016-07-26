@@ -7,3 +7,41 @@ FATAL:  database "my_database_development" does not exist
 FATAL:  database "my_database_development" does not exist
 FATAL:  database "my_database_development" does not exist
 FATAL:  database "my_database_development" does not exist
+ERROR:  column "colour" does not exist
+STATEMENT:  ALTER TABLE "products" RENAME COLUMN "colour" TO "color"
+ERROR:  column "color" of relation "products" already exists
+STATEMENT:  ALTER TABLE "products" ADD "color" character varying
+ERROR:  column "colour" does not exist
+STATEMENT:  ALTER TABLE "products" RENAME COLUMN "colour" TO "color"
+ERROR:  column "color" of relation "products" already exists
+STATEMENT:  ALTER TABLE "products" ADD "color" character varying
+ERROR:  column "color" of relation "products" already exists
+STATEMENT:  ALTER TABLE "products" ADD "color" character varying
+ERROR:  column "color" of relation "products" already exists
+STATEMENT:  ALTER TABLE "products" ADD "color" character varying
+ERROR:  column "color" of relation "products" already exists
+STATEMENT:  ALTER TABLE "products" ADD "color" character varying
+ERROR:  column "color" of relation "products" already exists
+STATEMENT:  ALTER TABLE "products" ADD "color" character varying
+ERROR:  relation "products" does not exist
+STATEMENT:  ALTER TABLE "products" ADD "color" character varying
+ERROR:  database "my_database_development" already exists
+STATEMENT:  CREATE DATABASE "my_database_development" ENCODING = 'utf8'
+ERROR:  database "my_database_test" already exists
+STATEMENT:  CREATE DATABASE "my_database_test" ENCODING = 'utf8'
+ERROR:  relation "products" does not exist
+STATEMENT:  ALTER TABLE "products" ADD "color" character varying
+ERROR:  relation "products" does not exist
+STATEMENT:  ALTER TABLE "products" ADD "color" character varying
+ERROR:  relation "products" does not exist
+STATEMENT:  ALTER TABLE "products" ADD "color" character varying
+ERROR:  relation "products" does not exist
+STATEMENT:  ALTER TABLE "products" ADD "color" character varying
+ERROR:  database "my_database_development" already exists
+STATEMENT:  CREATE DATABASE "my_database_development" ENCODING = 'utf8'
+ERROR:  database "my_database_test" already exists
+STATEMENT:  CREATE DATABASE "my_database_test" ENCODING = 'utf8'
+ERROR:  relation "products" does not exist
+STATEMENT:  ALTER TABLE "products" ADD "color" character varying
+ERROR:  relation "products" does not exist
+STATEMENT:  ALTER TABLE "products" ADD "color" character varying
