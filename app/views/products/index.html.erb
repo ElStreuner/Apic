@@ -6,22 +6,12 @@
   <div class="container-fluid">
     <div class="row">
       <% @products.each do |product| %>
-        <div class="col-sm-2 col-md-4">
-        <h1>Fresh wie Gefrierbrand</h1>
-        <%= image_tag(product.image_url, class: "img-responsive") %>
-        <p><%= product.name %></p>
-        <p>Was geht für das Cash</p>
-        <p><%= product.description %></p>
-        <strong>86.00$</strong>
-        <p><%= product.price %></p>
-       
-
-        </div><!-- /col -->
-      <% end %>
+    <%= render partial: "product", locals: {product: product} %>
+  <% end %>
     </div>
   </div>
 
-  <thead>
+ <!--  <thead>
     <tr>
       <th>Name</th>
       <th>Description</th>
@@ -49,6 +39,6 @@
   </tbody>
 </table>
 
-<br>
+<br> -->
 
 <%= link_to 'New Product', new_product_path %>
