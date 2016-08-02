@@ -3,9 +3,9 @@ class ProductsController < ApplicationController
 
   # GET /products
   # GET /products.json
-  def index
+  def landing_page
   @products = Product.all
-  render layout: "products"
+  render layout: "product"
 end
   def landing_page
     @products = Product.limit(3)

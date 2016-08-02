@@ -1,4 +1,4 @@
-<%= render partial: 'shared/form', locals: { product: product } %>
+<%= render @products %>
  <% @products.each do |product| %>
         <div class="col-sm-2 col-md-12" style="float: left; ">
         <h1 style="text-align: left;"><%= product.name %></h1>

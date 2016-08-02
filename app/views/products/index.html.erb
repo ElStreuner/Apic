@@ -6,12 +6,12 @@
   <div class="container-fluid">
     <div class="row">
       <% @products.each do |product| %>
-    <%= render partial: "product", locals: {product: product} %>
+    <%= render @products %>
   <% end %>
     </div>
   </div>
 
- <!--  <thead>
+  <thead>
     <tr>
       <th>Name</th>
       <th>Description</th>
@@ -39,6 +39,6 @@
   </tbody>
 </table>
 
-<br> -->
+<br>
 
 <%= link_to 'New Product', new_product_path %>
