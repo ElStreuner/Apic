@@ -1,5 +1,4 @@
 class ProductsController < ApplicationController
-  layout "static"
   before_action :set_product, only: [:show, :edit, :update, :destroy]
 
   # GET /products
