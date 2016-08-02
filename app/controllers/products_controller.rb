@@ -8,7 +8,7 @@ class ProductsController < ApplicationController
   render layout: "product"
 end
   def landing_page
-    @products = Product.limit(3)
+    @products = Product.limit(6)
   end
 
   # GET /products/1
