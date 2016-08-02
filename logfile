@@ -45,3 +45,4 @@ ERROR:  relation "products" does not exist
 STATEMENT:  ALTER TABLE "products" ADD "color" character varying
 ERROR:  relation "products" does not exist
 STATEMENT:  ALTER TABLE "products" ADD "color" character varying
+FATAL:  database "YoungQuan" does not exist
