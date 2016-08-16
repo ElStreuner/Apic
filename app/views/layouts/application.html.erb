@@ -23,12 +23,19 @@
                	<span class="icon-bar"></span>
                	</button>
                	<div class="navbar-collapse collapse">
+                <div class="col-sm-4 col-md-4 pull-right suchfeld">
+                <%= form_tag("/products", method: "get") do %>
+              <%= label_tag(:q, "Search for:") %>
+          <%= text_field_tag(:q) %>
+          <%= submit_tag("Search") %>
+          <% end %>
+          </div>
    					<ul class="navigation">
     				<li><a href="https://huan.herokuapp.com">Home</a></li>
   					<li><a href="https://huan.herokuapp.com/static_pages/contact">Contact</a></li>
   					<li><a href="https://huan.herokuapp.com/static_pages/about">About</a></li>
   					</ul>
-  					</div>
+              </div>
             	</div>
         	 </div>
       	</nav>
