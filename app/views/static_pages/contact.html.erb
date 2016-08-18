@@ -5,7 +5,7 @@
 
 <%= form_tag("/static_pages/thank_you") do %>
 <h1> Please insert E-Mail and Contact </h1>
-<div class="row">
+<div class="row" id="Array">
   <div class="col-md-4">
     <div class="form-group">
       <%= label_tag :name %>
@@ -20,6 +20,8 @@
       <%= text_area_tag :message, nil, class: "form-control", placeholder: "Enter Message" %>
     </div>      
   </div>
-</div>
-<%= submit_tag "Send" %>   
+  </div> 
+  <div class="execute">
+<%= submit_tag "Send" %>
+</div> 
 <% end %>

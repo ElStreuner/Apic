@@ -1,4 +1,4 @@
-<h2>Featured Product:</h2>
+<h2>Los Productos: </h2>
 <div id="carousel-example-generic" class="carousel slide" data-ride="carousel">
   <!-- Indicators -->
   <%= params[:example_key] %>
@@ -10,7 +10,7 @@
 
   <!-- Wrapper for slides -->
   <!-- Wrapper for slides -->
-  <%= params[:example_key].to_i * 10 %>
+
   <div class="carousel-inner" role="listbox">
     <% @products.each do |product| %>
     <div class="item<%= " active" if product == @products.first %>">

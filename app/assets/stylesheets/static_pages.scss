@@ -5,6 +5,11 @@ h1 {
 	color: black;
 	text-align: center;
 }
+h2 {
+    text-align: center;
+    font-size: 2em;
+    font-family: Arial, Helvetica, sans-serif;
+}
 p {
 	text-algin: center;
 	display: inline-block;
@@ -33,16 +38,12 @@ li a {
     border-right: 2px solid #F83939;
 }
 footer {
-	padding: 1em;
-    color: white;
+	position:fixed;
+    bottom: 0;
+    width: 100%;
     background-color: black;
-    clear: left;
+    color: white;
     text-align: center;
-    border-top-style: dotted;
-    border-right-style: solid;
-    border-bottom-style: dotted;
-    border-left-style: solid;
-    border-color: white;
 }
 .Text blockquote {
 	font-size: 2em;
@@ -50,14 +51,14 @@ footer {
 	text-align: justify;
 }
 .img-responsive {
-	width: 120%;
+	width: 100%;
+    margin:auto;
+
 }
 .container-fluid {
-	width: 120%;
+	width: 100%;
 }
 .body {
-	margin:0px; 
-	padding:0px;
 	width: 100%;
 	color: black;
 
@@ -121,4 +122,20 @@ footer {
 }
 .heading {
     padding-top: 30px;
+}
+#navi {
+    width: 100%;
+}
+#rightwing {
+    color: white;
+}
+#rightwing submit_tag {
+    color: black;
+}
+#Array {
+    margin-right: 15px;
+    padding-left: 2em;
+}
+.execute {
+    padding-left: 2em;
 }
