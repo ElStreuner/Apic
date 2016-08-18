@@ -36,10 +36,14 @@
                 <%= form_tag("/products", method: "get") do %>
               <%= label_tag(:q, "Search for:") %>
           <%= text_field_tag(:q) %>
+          <div class="Searchit">
           <%= submit_tag("Search") %>
+          </div>
           <% end %>
           </div>
         </nav>
+        <div class="Blank it">
+        </div>
 
       
     <%= yield %>
