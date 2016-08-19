@@ -13,7 +13,9 @@
  *= require_tree .
  *= require_self
  */
-
+* {
+	margin: 0px; padding: 0px;
+}
 h1 {
 	font-size: 2em;
 	font-family: "Times New Roman", Times, serif;
@@ -207,3 +209,10 @@ footer {
 #igit {
 	text-align: center;
 }
+.thumbnail {
+	width: 200px;
+}
+#black {
+	margin-left: 38em;
+}
+

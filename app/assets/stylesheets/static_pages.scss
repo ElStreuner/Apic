@@ -1,4 +1,6 @@
-
+* {
+    margin: 0px; padding: 0px;
+}
 h1 {
 	font-size: 2em;
 	font-family: "Times New Roman", Times, serif;
@@ -57,11 +59,6 @@ footer {
 }
 .container-fluid {
 	width: 100%;
-}
-.body {
-	width: 100%;
-	color: black;
-
 }
 .bs-calltoaction.bs-calltoaction-success{
     color: #fff;
