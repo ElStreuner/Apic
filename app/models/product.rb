@@ -8,3 +8,4 @@ class Product < ApplicationRecord
   	comments.rating_desc.last
 	end
 		end
+
