@@ -1,36 +1,34 @@
-<div class="container-fluid">
-    <div class="row" id="black">
-        <a href="#" class="thumbnail">
-            <%=image_tag(@product.image_url, class: "img-responsive", id: "productpic") %>
-        </a>
-    </div>
+<!-- <div class="container"> -->
+   <div class="row">
+   <div class="col-md-8">
+      <%=image_tag(@product.image_url, class: "img-responsive", id: "productpic") %>
+   </div>
+   <div class="col-md-4" id="sentence">
+      <p>
+         <strong>Name:</strong>
+         <%=@product.name %>
+      </p>
+      <p>
+         <strong>Description:</strong>
+         <%=@product.description %>
+      </p>
+      <p>
+         <strong>Color:</strong>
+         <%=@product.color %>
+      </p>
+      <p>
+         <strong>Price:</strong>
+         <%=@product.price %>
+      </p>
+      <p>
+    <div class="rating"></div>
+  </p>
+   </div>
 </div>
-<div class="col-xs-6 col-sm-3" style="font-size:10px;">
-    <p>
-        <strong>Name:</strong>
-        <%=@product.name %>
-    </p>
-</div>
-<div class="col-xs-6 col-sm-3" style="font-size:10px;">
-    <p>
-        <strong>Description:</strong>
-        <%=@product.description %>
-    </p>
-</div>
-<div class="clearfix visible-xs-block"></div>
-<div class="col-xs-6 col-sm-3" style="font-size:10px;">
-    <p>
-        <strong>Color:</strong>
-        <%=@product.color %>
-    </p>
-</div>
-<div class="col-xs-6 col-sm-3" style="font-size:10px;">
-    <p>
-        <strong>Price:</strong>
-        <%=@product.price %>
-    </p>
-</div>
-    <%=link_to 'Edit', edit_product_path(@product) %> |
+    <div class="free">
+        <%=link_to 'Edit', edit_product_path(@product) %> |
         <%=link_to 'Back', products_path %>
-        <%= @product.highest_rating_comment %>
-        <%= @product.lowest_rating_comment %>
+    </div>
+
+        <%= render partial: 'new_comment' %>
+        <%= render partial: 'comments' %>

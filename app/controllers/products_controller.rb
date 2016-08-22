@@ -29,7 +29,11 @@ end
   # GET /products/1/edit
   def edit
   end
-
+  # GET /products/1
+  # GET /products/1.json
+  def show
+    @comments = @product.comments.order("created_at DESC")
+  end
   # POST /products
   # POST /products.json
   def create

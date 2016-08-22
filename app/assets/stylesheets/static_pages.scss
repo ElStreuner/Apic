@@ -22,11 +22,10 @@ ul {
     margin: 0;
     padding: 0;
     overflow: hidden;
-    background-color: #303030;
 }
 
 li {
-    float: left;
+    float: right;
 }
 
 li a {
@@ -35,7 +34,6 @@ li a {
     text-align: center;
     padding: 14px 16px;
     text-decoration: none;
-    border-right: 2px solid #F83939;
 }
 footer {
 	position:fixed;

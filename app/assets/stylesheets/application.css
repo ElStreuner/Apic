@@ -19,6 +19,7 @@ h1 {
 	font-family: "Times New Roman", Times, serif;
 	color: black;
 	text-align: center;
+	margin-top: 10px;
 }
 h2 {
     text-align: center;
@@ -47,13 +48,6 @@ p {
 	width: 100%;
 	margin-left: 1em;
 }
-ul {
-    list-style-type: none;
-    margin: 0;
-    padding: 0;
-    overflow: hidden;
-    background-color: #303030;
-}
 
 li {
     float: left;
@@ -65,7 +59,7 @@ li a {
     text-align: center;
     padding: 14px 16px;
     text-decoration: none;
-    border-right: 2px solid #F83939;
+    border-left: 2px solid red;
 }
 footer {
 	position:fixed;
@@ -81,12 +75,9 @@ footer {
 	text-align: justify;
 }
 .img-responsive {
-	width: 100%;
+	width: 80%;
     margin:auto;
-
 }
-.container-fluid {
-	width: 100%;
 }
 .body {
 	width: 100%;
@@ -190,6 +181,16 @@ footer {
 #productpic {
 	width: 200px;
 }
-
-
-
+#distance {
+	padding-top: 2em;
+	font-size: 1em;
+}
+.col-md-4 p {
+	font-size: 1.5em;
+}
+#sentence {
+	margin-left: -15px;
+}
+.row {
+	width: 80%;
+}
