@@ -202,3 +202,6 @@ footer {
                font-size: 2em;
                margin-bottom: 1em;
              }
+#links p {
+  font-size: 1em;
+}
