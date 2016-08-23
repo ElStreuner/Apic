@@ -1,0 +1,239 @@
+
+h1 {
+	font-size: 2em;
+	font-family: "Times New Roman", Times, serif;
+	color: black;
+	text-align: center;
+	margin-top: 10px;
+}
+h2 {
+    text-align: center;
+    font-size: 2em;
+    font-family: Arial, Helvetica, sans-serif;
+    padding-bottom: 1em;
+    font:normal 2em Arial;
+    color:black;
+    text-shadow: 0 1px 0 #ccc,
+               0 2px 0 #c9c9c9,
+               0 3px 0 #bbb,
+               0 4px 0 #b9b9b9,
+               0 5px 0 #aaa,
+               0 6px 1px rgba(0,0,0,.1),
+               0 0 5px rgba(0,0,0,.1),
+               0 1px 3px rgba(0,0,0,.3),
+               0 3px 5px rgba(0,0,0,.2),
+               0 5px 10px rgba(0,0,0,.25),
+               0 10px 10px rgba(0,0,0,.2),
+               0 20px 20px rgba(0,0,0,.15);
+}
+p {
+	text-algin: center;
+	display: inline-block;
+	font-size: 2em;
+	width: 100%;
+	margin-left: 1em;
+}
+
+li {
+    float: left;
+}
+
+li a {
+    display: block;
+    color: white;
+    text-align: center;
+    padding: 14px 16px;
+    text-decoration: none;
+    border-left: 2px solid red;
+}
+footer {
+	position:fixed;
+    bottom: 0;
+    width: 100%;
+    background:
+    radial-gradient(hsl(0, 100%, 27%) 4%, hsl(0, 100%, 18%) 9%, hsla(0, 100%, 20%, 0) 9%) 0 0,
+    radial-gradient(hsl(0, 100%, 27%) 4%, hsl(0, 100%, 18%) 8%, hsla(0, 100%, 20%, 0) 10%) 50px 50px,
+    radial-gradient(hsla(0, 100%, 30%, 0.8) 20%, hsla(0, 100%, 20%, 0)) 50px 0,
+    radial-gradient(hsla(0, 100%, 30%, 0.8) 20%, hsla(0, 100%, 20%, 0)) 0 50px,
+    radial-gradient(hsla(0, 100%, 20%, 1) 35%, hsla(0, 100%, 20%, 0) 60%) 50px 0,
+    radial-gradient(hsla(0, 100%, 20%, 1) 35%, hsla(0, 100%, 20%, 0) 60%) 100px 50px,
+    radial-gradient(hsla(0, 100%, 15%, 0.7), hsla(0, 100%, 20%, 0)) 0 0,
+    radial-gradient(hsla(0, 100%, 15%, 0.7), hsla(0, 100%, 20%, 0)) 50px 50px,
+    linear-gradient(45deg, hsla(0, 100%, 20%, 0) 49%, hsla(0, 100%, 0%, 1) 50%, hsla(0, 100%, 20%, 0) 70%) 0 0,
+    linear-gradient(-45deg, hsla(0, 100%, 20%, 0) 49%, hsla(0, 100%, 0%, 1) 50%, hsla(0, 100%, 20%, 0) 70%) 0 0;
+    background-color: #300; 
+    background-size: 100px 100px;
+    color: white;
+    text-align: center;
+}
+.Text blockquote {
+	font-size: 2em;
+	font-family: Georgia, 'Times New Roman', serif;
+	text-align: justify;
+}
+.img-responsive {
+	width: 80%;
+    margin:auto;
+}
+}
+.body {
+	width: 100%;
+	color: black;
+
+}
+.bs-calltoaction.bs-calltoaction-success{
+    color: #fff;
+    background-color: #5cb85c;
+    border-color: #4cae4c;
+}
+.bs-calltoaction.bs-calltoaction-primary{
+    color: #fff;
+    background-color: #337ab7;
+    border-color: #2e6da4;
+}
+.bs-calltoaction.bs-calltoaction-default{
+    color: #333;
+    background-color: #fff;
+    border-color: #ccc;
+}
+.bs-calltoaction{
+    position: relative;
+    width:auto;
+    padding: 15px 25px;
+    border: 1px solid black;
+    margin-top: 10px;
+    margin-bottom: 10px;
+    border-radius: 5px;
+}
+
+    .bs-calltoaction > .row{
+        display:table;
+        width: calc(100% + 30px);
+    }
+     
+        .bs-calltoaction > .row > [class^="col-"],
+        .bs-calltoaction > .row > [class*=" col-"]{
+            float:none;
+            display:table-cell;
+            vertical-align:middle;
+        }
+        .cta-contents{
+                padding-top: 10px;
+                padding-bottom: 10px;
+            }
+
+                .cta-title{
+                    margin: 0 auto 15px;
+                    padding: 0;
+                }
+
+                .cta-desc{
+                    padding: 0;
+                }
+.cta-button{
+                padding-top: 10px;
+                padding-bottom: 10px;
+            }
+#Pickup  {
+    width: 400px;
+
+}
+.heading {
+    padding-top: 30px;
+      text-shadow: 0 1px 0 #ccc,
+               0 2px 0 #c9c9c9,
+               0 3px 0 #bbb,
+               0 4px 0 #b9b9b9,
+               0 5px 0 #aaa,
+               0 6px 1px rgba(0,0,0,.1),
+               0 0 5px rgba(0,0,0,.1),
+               0 1px 3px rgba(0,0,0,.3),
+               0 3px 5px rgba(0,0,0,.2),
+               0 5px 10px rgba(0,0,0,.25),
+               0 10px 10px rgba(0,0,0,.2),
+               0 20px 20px rgba(0,0,0,.15);
+}
+#navi {
+    width: 100%;
+}
+#rightwing {
+    color: white;
+}
+#rightwing submit_tag {
+    color: black;
+}
+#Array {
+    margin-right: 15px;
+    padding-left: 2em;
+}
+.execute {
+    padding-left: 2em;
+
+}
+.Searchit {
+    color: black;
+    float: right;
+    padding-right: 100px;
+}
+#productpic {
+	width: 200px;
+}
+#distance {
+	padding-top: 2em;
+	font-size: 1em;
+}
+.col-md-4 p {
+	font-size: 1.5em;
+}
+#sentence {
+	margin-left: -15px;
+}
+.row {
+	width: 80%;
+}
+#recs {
+	margin-bottom: 100px;
+}
+#trap 
+{
+	text-align: center;
+}
+.text {
+  text-shadow: 0 1px 0 #ccc, 
+               0 2px 0 #c9c9c9,
+               0 3px 0 #bbb,
+               0 4px 0 #b9b9b9,
+               0 5px 0 #aaa,
+               0 6px 1px rgba(0,0,0,.1),
+               0 0 5px rgba(0,0,0,.1),
+               0 1px 3px rgba(0,0,0,.3),
+               0 3px 5px rgba(0,0,0,.2),
+               0 5px 10px rgba(0,0,0,.25),
+               0 10px 10px rgba(0,0,0,.2),
+               0 20px 20px rgba(0,0,0,.15);
+               font-size: 2em;
+               margin-bottom: 1em;
+             }
+#links p {
+  font-size: 1em;
+}
+.rated {
+  padding-left: 2em;
+  margin-top: 5px;
+}
+.rating {
+  padding-left: 2em;
+}
+.Boy {
+  margin-bottom: 60px;
+}
+#sylt {
+  margin-left: 5em;
+}
+.back {
+  padding-left: 2em;
+}
+.digg_pagination {
+  margin-bottom: 8em;
+  text-align: center;
+}
