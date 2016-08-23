@@ -22,11 +22,11 @@
                 <span class="icon-bar"></span>
                 <span class="icon-bar"></span>
             </button>
-          <a class="navbar-brand">Märzstraße</a>
         </div>
         </div>
         <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
             <ul class="nav navbar-nav" id="links">
+          <li><p> <%= link_to "Landed", root_path%></p></li>
           <li><p> <%= link_to "Contact", static_pages_contact_path%></p></li>
           <li><p> <%= link_to "About", static_pages_about_path%></p></li>
           <li><p> <%= link_to "Products", products_path%> </p></li>
@@ -51,7 +51,12 @@
           </div>
           </div>
         </nav>
-      
+        <% if alert %>
+        <div class="alert alert-info" role="alert"><%= alert %></div>
+        <% end %> 
+        <% if notice %>
+        <div class="alert alert-warning" role="alert"><%= notice %>
+        <% end %>    
 
       
     <%= yield %>
