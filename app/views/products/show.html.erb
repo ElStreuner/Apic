@@ -19,13 +19,19 @@
          <strong>Price:</strong>
          <%=@product.price %>
       </p>
+      
+      <%= form_tag "/payments/create" do %>
+       <%= render partial: "shared/stripe_checkout_button" %>
+      <% end %>
+      
    </div>
-   <p>Average Rating: <div class="rated" data-score="<%= @product.average_rating %>"></div> </p>
+   <p>Average Rating: <div class="rated" data-score="<%= @product.average_rating %>"></div> 
+   </p>
 </div>
     <div class="free">
         <%=link_to 'Edit', edit_product_path(@product) %> |
         <%=link_to 'Back', products_path %>
-        
+
     </div>
 
         <%= render partial: 'new_comment' %>
