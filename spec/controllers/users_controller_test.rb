@@ -1,48 +1,39 @@
-require 'test_helper'
+require 'rails_helper'
 
-class UsersControllerTest < ActionDispatch::IntegrationTest
-  setup do
-    @user = users(:one)
+describe UsersController, :type => :controller do
+
+  before do
+    # @user = User.create!(first_name: "Pete", last_name: "Johnson", email: "peter@example.com", password: "password")
+    @user = FactoryGirl.create(:user)
+    # @user2 = User.create!(first_name: "Frank", last_name: "James", email: "frank2@example.com", password: "password")
+    @user2 = FactoryGirl.create(:user2)
   end
 
-  test "should get index" do
-    get users_url
-    assert_response :success
+  describe "GET #show" do
+     context "User is logged in" do
+       before do
+         sign_in @user
+       end
+
+       it "loads the correct user details" do
+         get :show, id: @user.id
+         expect(response.status).to eq 200
+         expect(assigns(:user)).to eq @user
+       end
+
+       it "doesn't load the second user" do
+         get :show, id: @user2.id
+         expect(response.status).to eq 302
+         expect(response).to redirect_to(root_path)
+       end
+     end
+
+     context "No user is logged in" do
+       it "redirects to login" do
+         get :show, id: @user.id
+         expect(response).to redirect_to(root_path)
+       end
+     end
   end
 
-  test "should get new" do
-    get new_user_url
-    assert_response :success
-  end
-
-  test "should create user" do
-    assert_difference('User.count') do
-      post users_url, params: { user: { first_name: @user.first_name, last_name: @user.last_name } }
-    end
-
-    assert_redirected_to user_url(User.last)
-  end
-
-  test "should show user" do
-    get user_url(@user)
-    assert_response :success
-  end
-
-  test "should get edit" do
-    get edit_user_url(@user)
-    assert_response :success
-  end
-
-  test "should update user" do
-    patch user_url(@user), params: { user: { first_name: @user.first_name, last_name: @user.last_name } }
-    assert_redirected_to user_url(@user)
-  end
-
-  test "should destroy user" do
-    assert_difference('User.count', -1) do
-      delete user_url(@user)
-    end
-
-    assert_redirected_to users_url
-  end
 end

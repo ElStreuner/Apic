@@ -11,7 +11,7 @@
   <!-- Wrapper for slides -->
   <!-- Wrapper for slides -->
 
-  <div class="carousel-inner" role="listbox">
+  <div class="carousel-inner" role="listbox" id="round">
     <% @products.each do |product| %>
     <div class="item<%= " active" if product == @products.first %>">
       <%= image_tag(product.image_url, class: "img-responsive", id:"Pickup") %>
