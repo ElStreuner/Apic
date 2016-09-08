@@ -9,6 +9,7 @@
         <%= link_to 'Destroy', product, method: :delete, data: { confirm: 'Are you sure?' } %>
         <br>
         <%= link_to 'New Product', new_product_path %><p>
+        <% logger.debug "Product: #{product.name}"%>
 
       </div><!-- /col -->
   

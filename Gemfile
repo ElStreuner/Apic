@@ -34,6 +34,7 @@ gem 'cancancan'
 # group :test, :development do
 gem 'will_paginate', '~> 3.1.0'
 #   gem 'sqlite3'
+gem 'byebug'
 # end
 
 
