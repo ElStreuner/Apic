@@ -6,6 +6,12 @@ Rails.application.routes.draw do
  end
     resources :users
 
+  post 'payments/create'
+
+  get 'static_pages/thanks_payment' => 'thank_you'
+
+  get 'payments/thanks'
+
   get 'static_pages/about'
 
   get 'static_pages/contact'
