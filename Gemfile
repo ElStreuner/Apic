@@ -8,6 +8,7 @@ gem 'puma', '~> 3.0'
 # Use pg as the database for Active Record
 gem 'pg'
 #PAy me
+#money
 gem 'stripe'
 #production
 gem 'rails_12factor'
