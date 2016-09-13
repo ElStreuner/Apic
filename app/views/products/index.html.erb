@@ -2,7 +2,9 @@
 
 <h1>Products</h1> -->
     <div class="row" id="dark">
+  	<% cache(cache_key_for_products) do %>
     <%=render @products%>
+    <% end %>
     </div>
   </div>
 <%= link_to 'New Product', new_product_path %>
