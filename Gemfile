@@ -33,7 +33,11 @@ gem 'cancancan'
 # gem 'bcrypt', '~> 3.1.7'
 # group :test, :development do
 gem 'will_paginate', '~> 3.1.0'
+#security
+gem 'brakeman'
 #   gem 'sqlite3'
+gem 'chosen-rails'
+#chosen
 gem 'byebug'
 # end
 

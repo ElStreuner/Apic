@@ -1,6 +1,6 @@
    <div class="row">
    <div class="col-md-8">
-      <%=image_tag(@product.image_url, class: "img-responsive", id: "productpic") %>
+      <%=image_tag(@product.image_url, width: "350", class:"img-zoom img-responsive", data_zoom_image: @product.image_url) %>
    </div>
    <div class="col-md-4" id="sentence">
       <p>
@@ -19,10 +19,10 @@
          <strong>Price:</strong>
          <%=@product.price %>
       </p>
-      
+        <div class="payment">
         <%= form_tag "/payments/create" do %>
           <%= render partial: "shared/stripe_checkout_button" %>
-          <%= hidden_field_tag(:product_id, @product.id) %>
+          <%= hidden_field_tag(:product_id, @product.id) %></div>
         <% end %>
 
    </div>
