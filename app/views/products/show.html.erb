@@ -1,3 +1,4 @@
+   ActionCable.server.broadcast 'product_channel', comment: "Brille Auf"
    <div class="row">
    <div class="col-md-8">
       <%=image_tag(@product.image_url, width: "100", class:"img-zoom img-responsive", data_zoom_image: @product.image_url) %>
@@ -34,7 +35,7 @@
         <%=link_to 'Back', products_path %>
 
     </div>
-
+      <div class="alert alert-info" style="display:none" role="alert">A new comment was posted!</div>
         <%= render partial: 'new_comment' %>
         <%= render partial: 'comments' %>
    <div class="digg_pagination">
