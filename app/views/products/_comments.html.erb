@@ -6,7 +6,7 @@
                 <% if signed_in? && current_user.admin? %>
                     <%= link_to ('<span class="glyphicon glyphicon-remove-sign"></span>').html_safe, product_comment_path(comment.product, comment), method: :delete, data: { confirm: 'Are you sure?' } %>
             <% end %>
-            <p class="well"><%= comment.body %></p> 
+            <p class="well" id="move"><%= comment.body %></p> 
             <p class="rated" data-score="<%= comment.rating %>"></p>
         </div>
     <% end %>
