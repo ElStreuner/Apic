@@ -43,6 +43,7 @@
           <div class="col-sm-4 col-md-4 pull-right suchfeld" id="rightwing">
                 <%= form_tag("/products", method: "get") do %>
               <%= label_tag(:q, "Search for:") %>
+              <br>
           <%= text_field_tag(:q) %>
           <div class="Searchit">
           <%= submit_tag("Search") %>

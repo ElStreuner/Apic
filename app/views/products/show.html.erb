@@ -1,8 +1,10 @@
   <div class="row">
    <div class="col-md-8">
+   <div class="card" id="showing">
       <%=image_tag(@product.image_url, width: "100", class:"img-zoom img-responsive", data_zoom_image: @product.image_url) %>
    </div>
-      <div class="alert alert-info" style="display:none" role="alert">A new comment was posted!</div>
+   </div>
+   <div class="container">
    <div class="col-md-4" id="sentence">
       <p>
          <strong>Name:</strong>
@@ -25,8 +27,11 @@
           <%= render partial: "shared/stripe_checkout_button" %>
           <%= hidden_field_tag(:product_id, @product.id) %></div>
         <% end %>
+        <div class="alert alert-info" style="display:none" role="alert">A new comment was posted!</div>
+      </div>
+      </div>
 
-   </div>
+
    <p>Average Rating: <div class="rated" data-score="<%= @product.average_rating %>"></div> 
    </p>
 </div>
