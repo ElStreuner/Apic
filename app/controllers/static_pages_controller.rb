@@ -1,4 +1,5 @@
 class StaticPagesController < ApplicationController
+  before_action :authenticate_user!
 	def landing_page
   	@featured_product = Product.first
     @products = Product.limit(3)
