@@ -7,22 +7,20 @@
    <div class="alert alert-info" style="display:none" role="alert">A new comment was posted!</div>
    <div class="container">
    <div class="col-md-4" id="sentence">
-      <p>
-         <strong>Name:</strong>
-         <%=@product.name %>
-      </p>
-      <p>
-         <strong>Description:</strong>
-         <%=@product.description %>
-      </p>
-      <p>
-         <strong>Color:</strong>
-         <%=@product.color %>
-      </p>
-      <p>
-         <strong>Price:</strong>
-         <%=@product.price %>
-      </p>
+   <table id="customers">
+    <tr>
+    <th><strong>Name:</strong></th>
+    <th><strong>Description:</strong></th>
+    <th><strong>Color:</strong></th>
+    <th><strong>Price:</strong></th>
+  </tr>
+  <tr>
+    <td><%=@product.name %></td>
+    <td><%=@product.description %></td>
+    <td><%=@product.color %></td>
+    <td><%=@product.price %></td>
+    </tr>
+    </table>
         <div class="payment">
         <%= form_tag "/payments/create" do %>
           <%= render partial: "shared/stripe_checkout_button" %>
@@ -32,7 +30,7 @@
       </div>
 
 
-   <p>Average Rating: <div class="rated" data-score="<%= @product.average_rating %>"></div> 
+   <p>Average Rating: <div class="rated" data-score="<%= @product.average_rating %>" id="stars"></div> 
    </p>
 </div>
     <div class="free">
