@@ -1,20 +1,21 @@
+  <div class="container-fluid">
   <div class="row" data-product-id="<%= @product.id %>">
    <div class="col-md-8">
    <div class="card" id="showing">
-      <%=image_tag(@product.image_url, width: "100", class:"img-zoom img-responsive", data_zoom_image: @product.image_url) %>
+      <%=image_tag(@product.image_url, width: "100%", class:"img-zoom img-responsive", data_zoom_image: @product.image_url) %>
    </div>
    </div>
    <div class="alert alert-info" style="display:none" role="alert">A new comment was posted!</div>
-   <div class="container">
+   <div class="container-fluid">
    <div class="col-md-4" id="sentence">
-   <table id="customers">
+    <table id="customers">
+      <tr>
+      <th><strong>Name:</strong></th>
+      <th><strong>Description:</strong></th>
+      <th><strong>Color:</strong></th>
+      <th><strong>Price:</strong></th>
+    </tr>
     <tr>
-    <th><strong>Name:</strong></th>
-    <th><strong>Description:</strong></th>
-    <th><strong>Color:</strong></th>
-    <th><strong>Price:</strong></th>
-  </tr>
-  <tr>
     <td><%=@product.name %></td>
     <td><%=@product.description %></td>
     <td><%=@product.color %></td>
@@ -25,12 +26,13 @@
       <div class="product-title">
         <% if signed_in? %>
           <%= form_tag "/payments/create" do %>
+          <%= hidden_field_tag(:product_id, @product.id) %>
             <%= render "shared/stripe_checkout_button" %>
           <% end %>
         <% end %>
       </div>
     </div>
-    </div>
+  </div>
 
     <br>
     <div class="free">
@@ -54,4 +56,6 @@
     </div>
     <%= will_paginate @comments, :container => false %>
   </div>
+</div>
+</div>
 

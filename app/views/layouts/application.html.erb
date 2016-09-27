@@ -26,11 +26,11 @@
         </div>
         <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
             <ul class="nav navbar-nav" id="links">
-          <li><p> <%= link_to "Landed", root_path%></p></li>
-          <li><p> <%= link_to "Contact", static_pages_contact_path%></p></li>
-          <li><p> <%= link_to "About", static_pages_about_path%></p></li>
-          <li><p> <%= link_to "Products", products_path%> </p></li>
-        </ul>
+              <li><p> <%= link_to "Landed", root_path%></p></li>
+              <li><p> <%= link_to "Contact", static_pages_contact_path%></p></li>
+              <li><p> <%= link_to "About", static_pages_about_path%></p></li>
+              <li><p> <%= link_to "Products", products_path%> </p></li>
+            </ul>
         <ul class="nav navbar-nav navbar-right">
           <li>
             <% if user_signed_in? %>
@@ -56,14 +56,14 @@
         <div class="alert alert-info" role="alert"><%= alert %></div>
         <% end %> 
         <% if notice %>
-        <div class="alert alert-warning" role="alert"><%= notice %>
+        <div class="alert alert-warning" role="alert"><%= notice %></div>
         <% end %>  
 
   <%= yield %>
     <footer>
-<iframe src="https://www.facebook.com/plugins/page.php?href=https%3A%2F%2Fwww.facebook.com%2Fyunghurn%2F%3Ffref%3Dts&tabs=timeline&width=50px&height=50px&small_header=true&adapt_container_width=true&hide_cover=false&show_facepile=false&appId" width="450px" height="70px" style="border:none;overflow
-hidden" scrolling="no" frameborder="0" allowTransparency="true"></iframe>
-&copy; Life from Earth
-</footer>
+      <iframe src="https://www.facebook.com/plugins/page.php?href=https%3A%2F%2Fwww.facebook.com%2Fyunghurn%2F%3Ffref%3Dts&tabs=timeline&width=50px&height=50px&small_header=true&adapt_container_width=true&hide_cover=false&show_facepile=false&appId" width="450px" height="70px" style="border:none;overflow
+        hidden" scrolling="no" frameborder="0" allowTransparency="true"></iframe>
+        &copy; Life from Earth
+    </footer>
   </body>
 </html>
