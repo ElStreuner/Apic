@@ -22,6 +22,8 @@ class PaymentsController < ApplicationController
         :total => @price
         )
       end
+
+      flash[:success] = "Payment processed successfully"
   rescue Stripe::CardError => e
     body = e.json_body
     err = body[:error]
