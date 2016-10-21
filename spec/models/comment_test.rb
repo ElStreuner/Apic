@@ -1,7 +1,7 @@
-require 'test_helper'
+require 'rails_helper'
 
-class CommentTest < ActiveSupport::TestCase
-  # test "the truth" do
-  #   assert true
-  # end
+describe Comment do
+  it "should be not valid to have only a rating" do
+    expect(FactoryGirl.build(:comment)).not_to be_valid
+  end
 end

@@ -2,37 +2,49 @@ require 'rails_helper'
 
 describe UsersController, :type => :controller do
 
-  before do
-    @user = FactoryGirl.create(:user)
-    sequence(:email) { |n| "user#{n}@example.com" }
-    @user2 = User.create!(email: "maria@example.com", password: "0987654321")
-  end
+  let(:user) { FactoryGirl.create(:user) }
+  let(:admin) { FactoryGirl.create(:admin) }
 
-  describe "GET #show" do
-     context "User is logged in" do
-      before do
-        sign_in @user
-      end
+  describe 'GET #show' do
+    context 'User is logged in' do
 
-      it "loads correct user details" do
-        get :show, id: @user.id
+       before do
+         sign_in user
+       end
+
+      it 'loads correct user details' do
+        expect(response).to be_success
         expect(response).to have_http_status(200)
-        expect(assigns(:user)).to eq @user
       end
 
-       it "doesn't load the second user" do
-         get :show, id: @user2.id
-         expect(response).to have_http_status(302)
-         expect(response).to redirect_to(root_path)
-       end
+      it 'is :user equal to the created user' do
+        get :show, params: { id: user.id }, session: { user_id: user.id }
+        expect(assigns(:user)).to eq user
+      end
+    end
 
-     end
+    context 'No user is logged in' do
+      it 'redirects to root_path' do
+        get :show, params: { id: user.id }, session: { user_id: user.id }
+        expect(response).to redirect_to(root_path)
+      end
+    end
 
-     context "No user is logged in" do
-       it "redirects to login" do
-         get :show, id: @user.id
-         expect(response).to redirect_to('/login')
-       end
-     end
+    context ':second user logged can access :user show page but is not equal to admin' do
+      before do
+        sign_in admin
+      end
+
+      it 'is :user NOT equal to admin' do
+        get :show, params: { id: admin.id }, session: { user_id: admin.id }
+        expect(assigns(:user)).not_to eq user
+      end
+
+      it 'redirects to root_path' do
+        get :show, params: { id: user.id }, session: { user_id: user.id }
+        expect(response).to have_http_status(200)
+      end
+
+    end
   end
 end
